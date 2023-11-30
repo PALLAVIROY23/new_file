@@ -14,78 +14,18 @@ class _pageState extends State<page> {
         appBar: AppBar(
           title: Text("My name"),
         ),
-        body: GridView(
-            gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-            children:[
-              Builder(
-                  builder: (context) {
-                    return Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.red,
-                            margin: EdgeInsets.all(2),
-                          ),
-                        ),
-                      ],
-                    );
-                  }
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.all(2),
-              ),
-            ]
-        )
+        body: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+            ),
+            itemCount: 300,
+            itemBuilder: (BuildContext context, int index) {
+              return Card(
+                color: Colors.amber,
+                child: Center(child: Text('$index')),
+              );
+            }
+        ),
 
 
     );
