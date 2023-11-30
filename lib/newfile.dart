@@ -16,13 +16,17 @@ class _pageState extends State<page> {
         ),
         body: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
+              crossAxisCount: 2,
             ),
-            itemCount: 300,
+            itemCount: 50,
             itemBuilder: (BuildContext context, int index) {
-              return Card(
-                color: Colors.amber,
-                child: Center(child: Text('$index')),
+
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: Colors.red,
+                  child: Center(child: Text('Pallavi')),
+                ),
               );
             }
         ),
