@@ -2,21 +2,23 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-class page extends StatefulWidget {
-  const page({super.key});
+
+import 'nevigated.dart';
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<page> createState() => _pageState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _pageState extends State<page> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(Duration(seconds: 15),() {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-              builder: (context) => screen()
+              builder: (context) => Nevigated()
           ));
 
     });
@@ -53,5 +55,5 @@ class _pageState extends State<page> {
     );
   }
 
-  screen() {}
+
 }

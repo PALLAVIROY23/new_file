@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-class nevigated extends StatefulWidget {
-  const nevigated({super.key});
+class Nevigated extends StatefulWidget {
+  const Nevigated({super.key});
 
   @override
-  State<nevigated> createState() => _nevigatedState();
+  State<Nevigated> createState() => _NevigatedState();
 }
 
-class _nevigatedState extends State<nevigated> {
+class _NevigatedState extends State<Nevigated> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class _nevigatedState extends State<nevigated> {
        itemCount: 5,
         itemBuilder:(BuildContext context, int index){
           return InkWell(
-            onTap: (){print("index$index");},
+            onTap: (){print("index>>>> $index");},
 
             child: Padding(
               padding: const EdgeInsets.all(8.0),
